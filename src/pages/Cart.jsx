@@ -150,7 +150,7 @@ const Cart = () => {
                 <h2 className="text-xl font-bold">Review Items</h2>
                 <button 
                   onClick={handleClearCart} 
-                  className="text-red-500 text-sm font-bold flex items-center gap-1 transition-transform active:scale-90 hover:opacity-80"
+                  className="text-red-500 text-sm font-bold flex items-center gap-1 transition-transform active:scale-90 hover:opacity-80 cursor-pointer"
                 >
                   <FaTrash size={12}/> Clear Cart
                 </button>
@@ -202,7 +202,7 @@ const Cart = () => {
 
               <button 
                 onClick={handleCheckOut}
-                className="w-full py-5 bg-orange-600 hover:bg-orange-500 text-white rounded-2xl font-black uppercase tracking-[0.15em] transition-all shadow-lg active:scale-95 mb-6"
+                className="w-full py-5 bg-orange-600 hover:bg-orange-500 text-white rounded-2xl font-black uppercase tracking-[0.15em] transition-all shadow-lg active:scale-95 mb-6 cursor-pointer"
               >
                 Place My Order
               </button>
