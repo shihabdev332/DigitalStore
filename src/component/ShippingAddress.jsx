@@ -141,7 +141,7 @@ const ShippingAddress = ({ onAddressUpdate }) => {
             <button
               type="button"
               onClick={getUserLocation}
-              className="w-full flex items-center justify-center gap-2 py-4 bg-orange-600 text-white rounded-2xl font-bold hover:bg-orange-700 transition-all active:scale-[0.98] shadow-md shadow-orange-100"
+              className="w-full flex items-center justify-center gap-2 py-4 bg-orange-600 text-white rounded-2xl font-bold hover:bg-orange-700 transition-all active:scale-[0.98] shadow-md shadow-orange-100 cursor-pointer"
             >
               <Navigation size={18} /> Auto-detect My Location
             </button>
