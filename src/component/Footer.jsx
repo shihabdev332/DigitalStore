@@ -24,132 +24,154 @@ const Footer = () => {
     }
 
     setError("");
-    alert("Subscribed successfully with: " + email);
+    // Changed alert to console log or custom UI in real app, kept alert for demo but clarified msg
+    alert("Thank you for subscribing to our DEMO newsletter: " + email);
     setEmail("");
   };
 
   return (
-    <footer className="bg-gray-900 text-gray-300 px-6 py-10 ">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <footer className="bg-slate-950 text-slate-300 font-sans border-t border-slate-800">
+      
+      {/* SECURITY DISCLAIMER STRIP - Crucial for Google Review */}
+      <div className="w-full bg-slate-900 border-b border-slate-800 py-2 text-center">
+        <p className="text-xs text-slate-500 uppercase tracking-widest font-semibold">
+          ⚠️ Disclaimer: This is a Personal Portfolio Project | No Real Money Involved
+        </p>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        
         {/* About Section */}
         <div>
-          <h3 className="text-lg font-semibold mb-4">
-            More about Digital Shop
+          <h3 className="text-xl font-bold text-white mb-4">
+            Digital Shop <span className="text-xs font-normal text-cyan-500">(Demo)</span>
           </h3>
-          <p className="text-sm mb-4">
-            Welcome to Digital Shop, your online store for mobile phones,
-            tablets, laptops, and electronics. We offer quality devices at
-            competitive prices, fast delivery, and a seamless shopping
-            experience, making it easy to stay connected and up-to-date with
-            technology.
+          <p className="text-sm leading-relaxed mb-6 text-slate-400">
+            Welcome to Digital Shop. This website is a <strong>developer portfolio project</strong> created by Shihab. 
+            It demonstrates full-stack e-commerce capabilities using the MERN stack. 
+            <br />
+            <span className="text-xs italic opacity-75 text-yellow-500 mt-2 block">
+              * Note: Products and orders are for demonstration only.
+            </span>
           </p>
           <div className="flex space-x-4">
-            <Link to="#">
-              <FaGithub size={22} />
-            </Link>
-            <Link to="#">
-              <FaYoutube size={22} />
-            </Link>
-            <Link to="#">
-              <FaLinkedin size={22} />
-            </Link>
-            <Link to="#">
-              <FaFacebook size={22} />
-            </Link>
-            <Link to="#">
-              <FaEnvelope size={22} />
-            </Link>
+            <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors">
+              <FaGithub size={20} />
+            </a>
+            <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer" className="hover:text-red-500 transition-colors">
+              <FaYoutube size={20} />
+            </a>
+            <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition-colors">
+              <FaLinkedin size={20} />
+            </a>
+            <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition-colors">
+              <FaFacebook size={20} />
+            </a>
+            <a href="mailto:shihab@example.com" className="hover:text-emerald-400 transition-colors">
+              <FaEnvelope size={20} />
+            </a>
           </div>
         </div>
 
         {/* Shop Links */}
         <div>
-          <h3 className="text-lg font-semibold mb-4">Shop</h3>
-          <ul className="space-y-2 text-sm">
+          <h3 className="text-lg font-semibold text-white mb-4">Shop Categories</h3>
+          <ul className="space-y-3 text-sm text-slate-400">
             <li>
-              <Link to="/accessories">Accessories</Link>
+              <Link to="/accessories" className="hover:text-cyan-400 transition-colors">Accessories</Link>
             </li>
             <li>
-              <Link to="/shop">Clothes</Link>
+              <Link to="/shop" className="hover:text-cyan-400 transition-colors">Clothes</Link>
             </li>
             <li>
-              <Link to="/shop">Electronics</Link>
+              <Link to="/shop" className="hover:text-cyan-400 transition-colors">Electronics</Link>
             </li>
             <li>
-              <Link to="/shop">Home appliances</Link>
+              <Link to="/shop" className="hover:text-cyan-400 transition-colors">Home Appliances</Link>
             </li>
             <li>
-              <Link to="/shop">New Arrivals</Link>
+              <Link to="/shop" className="hover:text-cyan-400 transition-colors">New Arrivals</Link>
             </li>
           </ul>
         </div>
 
         {/* Account Links */}
         <div>
-          <h3 className="text-lg font-semibold mb-4">Your account</h3>
-          <ul className="space-y-2 text-sm">
+          <h3 className="text-lg font-semibold text-white mb-4">Your Account</h3>
+          <ul className="space-y-3 text-sm text-slate-400">
             <li>
-              <Link to="/profile">Profile</Link>
+              <Link to="/profile" className="hover:text-cyan-400 transition-colors">Profile</Link>
             </li>
             <li>
-              <Link to="/orders">Orders</Link>
+              <Link to="/orders" className="hover:text-cyan-400 transition-colors">My Orders</Link>
             </li>
             <li>
-              <Link to="/address">Addresses</Link>
+              <Link to="/address" className="hover:text-cyan-400 transition-colors">Addresses</Link>
             </li>
             <li>
-              <Link to="/profile">Account Details</Link>
+              <Link to="/profile" className="hover:text-cyan-400 transition-colors">Account Details</Link>
             </li>
             <li>
-              <Link to="/shop">Privacy</Link>
+              {/* Added clearer text for Privacy Policy */}
+              <Link to="/privacy-policy" className="hover:text-cyan-400 transition-colors">Privacy Policy (Demo)</Link>
             </li>
           </ul>
         </div>
 
-        {/* Newsletter */}
+        {/* Newsletter & Payments */}
         <div>
-          <h3 className="text-lg font-semibold mb-4">
-            Subscribe to our newsletter
+          <h3 className="text-lg font-semibold text-white mb-4">
+            Stay Updated
           </h3>
-          <p className="text-sm mb-4">
-            Stay updated with our latest offers and products.
+          <p className="text-sm mb-4 text-slate-400">
+            Subscribe to our newsletter for the latest demo updates.
           </p>
-          <form onSubmit={handleSubmit} className="flex flex-col space-y-2">
+          <form onSubmit={handleSubmit} className="flex flex-col space-y-3">
             <input
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="Insert your email ..."
-              className="px-3 py-2 rounded-md bg-gray-800 border border-gray-700 focus:outline-none text-sm"
+              placeholder="Your email address"
+              className="px-4 py-2 rounded bg-slate-800 border border-slate-700 focus:outline-none focus:border-cyan-500 text-sm text-white transition-colors"
             />
-            {error && <span className="text-red-500 text-xs">{error}</span>}
+            {error && <span className="text-red-400 text-xs">{error}</span>}
             <button
               type="submit"
-              className="bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-md text-sm cursor-pointer"
+              className="bg-cyan-600 hover:bg-cyan-700 text-white font-medium px-4 py-2 rounded text-sm transition-colors shadow-lg shadow-cyan-900/20"
             >
               Subscribe
             </button>
           </form>
 
-          {/* Payment icons */}
-          <div className="flex space-x-4 mt-4">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg"
-              alt="PayPal"
-              className="h-5"
-            />
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg"
-              alt="Visa"
-              className="h-5"
-            />
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg"
-              alt="MasterCard"
-              className="h-5"
-            />
+          {/* Payment icons - Dimmed to show they are not active real payments */}
+          <div className="mt-8">
+            <p className="text-xs text-slate-500 mb-2">Supported Payments (Demo Only):</p>
+            <div className="flex space-x-3 opacity-50 grayscale hover:grayscale-0 transition-all duration-300">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg"
+                alt="PayPal Demo"
+                className="h-6"
+              />
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg"
+                alt="Visa Demo"
+                className="h-6"
+              />
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg"
+                alt="MasterCard Demo"
+                className="h-6"
+              />
+            </div>
           </div>
         </div>
+      </div>
+      
+      {/* Copyright Bar */}
+      <div className="border-t border-slate-800 bg-slate-950 pt-8 pb-12 text-center">
+         <p className="text-xs text-slate-600">
+            &copy; {new Date().getFullYear()} Digital Shop Portfolio. Built by Shihab. All rights reserved.
+         </p>
       </div>
     </footer>
   );
