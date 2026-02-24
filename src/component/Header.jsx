@@ -46,16 +46,16 @@ const Header = () => {
     <div className="border-b-[1px] border-slate-200 sticky top-0 z-50 bg-white/80 backdrop-blur-md">
       <Container className="py-4 flex items-center gap-x-4 justify-between">
         {/* Logo */}
-        <Link to={"/"} className="hover:opacity-80 transition-opacity">
+        <Link to={"/"} className="hover:opacity-80 transition-opacity flex-shrink-0">
           <img
             src={logo}
             alt="logo"
-            className="h-[35px] md:h-[45px] w-auto object-contain"
+            className="h-[30px] sm:h-[35px] md:h-[45px] w-auto object-contain"
           />
         </Link>
 
-        {/* Search Bar */}
-        <div className="flex-1 max-w-md hidden sm:block">
+        {/* Search Bar - Responsive (Mobile & Desktop) */}
+        <div className="flex-1 max-w-md">
           <SearchInput onSearch={handleSearch} />
         </div>
 
@@ -97,9 +97,9 @@ const Header = () => {
         </div>
 
         {/* Right Icons (Cart & Mobile Menu) */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2 sm:gap-4 flex-shrink-0">
           <Link to={"/cart"} className="relative group p-2">
-            <FaShoppingCart className="text-2xl text-zinc-800 group-hover:text-zinc-600 transition-colors" />
+            <FaShoppingCart className="text-xl sm:text-2xl text-zinc-800 group-hover:text-zinc-600 transition-colors" />
             <span className="absolute top-0 right-0 w-4 h-4 rounded-full bg-zinc-900 text-white text-[10px] flex items-center justify-center font-bold">
               {products?.length || 0}
             </span>
@@ -107,7 +107,7 @@ const Header = () => {
 
           <button
             onClick={() => setIsOpen(true)}
-            className="md:hidden text-3xl text-zinc-900 p-1 rounded-lg hover:bg-zinc-100 transition-colors"
+            className="md:hidden text-2xl sm:text-3xl text-zinc-900 p-1 rounded-lg hover:bg-zinc-100 transition-colors"
           >
             <HiOutlineMenuAlt3 />
           </button>
